@@ -1,0 +1,14 @@
+[project]
+name = "flight-duty-period-utils"
+version = "0.1.0"
+description = "Library for computing flight crew duty periods and rest requirements based on EASA FTL and FAA Part 117 rules"
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
