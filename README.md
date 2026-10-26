@@ -40,3 +40,10 @@ Crew scheduling systems need a deterministic, auditable way to check whether a p
 ## Limits
 
 This library does not model split duty, in-flight rest, positioning (deadheading) as a separate concept from flight time, or Commander's Discretion. If you need those, layer them on top; do not expect this library to guess.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
